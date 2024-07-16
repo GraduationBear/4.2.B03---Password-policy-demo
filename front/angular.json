@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "4.2.B03---Password-policy-demo": {
+    "front": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/4.2.b03---password-policy-demo",
+            "outputPath": "dist/front",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "4.2.B03---Password-policy-demo:build:production"
+              "buildTarget": "front:build:production"
             },
             "development": {
-              "buildTarget": "4.2.B03---Password-policy-demo:build:development"
+              "buildTarget": "front:build:development"
             }
           },
           "defaultConfiguration": "development"

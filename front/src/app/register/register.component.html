@@ -1,0 +1,20 @@
+<div class="register-container">
+  <form (ngSubmit)="onSubmit()">
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" (input)="checkPasswordStrength()" required />
+
+    <div class="password-strength">
+      <div class="strength-bar" [style.width.%]="passwordStrength"></div>
+    </div>
+
+    <ul class="password-requirements">
+      <li [class.valid]="passwordHasLength"><i [class.icon]="passwordHasLength"></i>At least 8 characters</li>
+      <li [class.valid]="passwordHasUppercase"><i [class.icon]="passwordHasUppercase"></i>At least one uppercase letter</li>
+      <li [class.valid]="passwordHasLowercase"><i [class.icon]="passwordHasUppercase"></i>At least one lowercase letter</li>
+      <li [class.valid]="passwordHasNumber"><i [class.icon]="passwordHasUppercase"></i>At least one number</li>
+      <li [class.valid]="passwordHasSpecialChar"><i [class.icon]="passwordHasUppercase"></i>At least one special character</li>
+    </ul>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
